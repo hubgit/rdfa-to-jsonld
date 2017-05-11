@@ -1,0 +1,53 @@
+{
+  "name": "rdfa-jsonld",
+  "version": "0.0.1",
+  "description": "Convert RDFa to JSON-LD",
+  "main": "dist/index.js",
+  "repository": "https://github.com/hubgit/rdfa-jsonld.git",
+  "author": "Alf Eaton <eaton.alf@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --runInBand",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "babel lib --out-dir dist"
+  },
+  "dependencies": {
+    "jsonld": "^0.4.12",
+    "jsonld-rdfa-parser": "^1.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0",
+    "jest": "^20.0.1",
+    "rimraf": "^2.6.1",
+    "standard": "^10.0.2"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "jest": true,
+      "jasmine": true
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 4
+          }
+        }
+      ]
+    ]
+  }
+}
