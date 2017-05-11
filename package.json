@@ -1,6 +1,6 @@
 {
   "name": "rdfa-jsonld",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Convert RDFa to JSON-LD",
   "main": "dist/index.js",
   "repository": "https://github.com/hubgit/rdfa-jsonld.git",
